@@ -83,7 +83,7 @@ if( Cookies.get('token') !== null){
       console.log('매니저계정');
       router.push({ name: 'deskcalander' });
     } else {
-      console.log('맵핑문제');
+      console.log('맵핑문제or로그아웃');
       router.push({ name: 'loginview' })
     }
   } else {
