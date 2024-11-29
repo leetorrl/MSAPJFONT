@@ -32,7 +32,7 @@ const guestRouter = [
 
   {
     path: '/joincomplete',
-    name: 'joincompletew',
+    name: 'joincomplete',
     component: JoinComplete,
   },
 

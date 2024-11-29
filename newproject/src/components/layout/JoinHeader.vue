@@ -1,5 +1,7 @@
 <template>
     <div>
+      <div class="flex justify-center text-3xl mb-1 text-blue-800 font-bold">회원가입</div>
+      <div class="flex justify-center"><hr class="border-2 mb-10 w-[150px]"></div>
 <div class="flex justify-center space-x-2 w-full max-w-2xl">
     <div class="step flex flex-col items-center p-4 text-center bg-blue-900 text-white rounded-tl-lg rounded-bl-lg w-1/4">
       <p class="text-xl font-bold">01.</p>

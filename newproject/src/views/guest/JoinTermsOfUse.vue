@@ -1,26 +1,23 @@
 <template>
-
-<div class="w-3/4 max-w-2xl mt-5 p-8 mx-auto bg-white rounded shadow-2xl min-w-80 max-lg:w-1/2  mt-32">
-
-    <div class="flex flex-col items-center space-y-6 mt-8  mt-32">
-      
+<div class="  mt-5 p-8 mx-auto bg-white rounded shadow-2xl  mb-12">
+<div class="flex flex-col items-center space-y-6 mt-8  ">
       
 <JoinHeader />
-
         <!-- Title -->
-      <h2 class="text-2xl font-bold text-blue-900">회원가입</h2>
-  
+      <!-- <h2 class="text-2xl  text-blue-900">회원가입</h2> -->
       <!-- Step Progress Bar -->
      
-  
       <!-- Agreement Checkbox -->
-      <div class="w-full max-w-2xl">
-  
-  
+      <div class="w-full  flex justify-center">
+
         <!-- Terms Sections -->
-        <div class="mt-1 space-y-3">
+        <div class=" mt-1 space-y-3">
           <label for="" class=" ">회원 이용 약관</label>
-          <div class="p-4 border border-gray-300 rounded bg-gray-50 h-96 overflow-auto">
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" id="agree1" v-model="agree1" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+            <label for="agree1" class="text-gray-700">개인정보 수집 및 이용약관에 동의합니다.</label>
+          </div>
+          <div class=" p-4 border w-[1000px] border-gray-300 rounded bg-gray-50 h-96 overflow-auto">
             <p>그린컴퓨터아트학원 홈페이지 회원에 가입하시면 더욱 더 다양한 서비스를 이용하실 수 있습니다. 우리 사이트는 정보통신망 이용촉진에 관한 법률 등 관련 법령에 따라 아래와 같이 이용자의 동의를 받은 후 회원가입을 받고 있습니다.<br><br>
   
   
@@ -156,12 +153,9 @@
   
   위 약관을 모두 숙지하였으며 회원가입에 동의합니다.</p>
           </div>
-          <div class="flex items-center space-x-2">
-            <input type="checkbox" id="agree1" v-model="agree1" class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-            <label for="agree1" class="text-gray-700">개인정보 수집 및 이용약관에 동의합니다.</label>
-          </div>
+         
   <label for="" class="flex">개인정보 수집/이용 동의</label>
-          <div class="p-4 border border-gray-300 rounded bg-gray-50 h-72 overflow-auto">
+          <div class="p-4 border w-[1000px] border-gray-300 rounded bg-gray-50 h-72 overflow-auto">
             <p>1. 개인정보의 수집항목 및 수집방법<br>
   그린컴퓨터학원(이하 ‘학원’) 출결사이트에서는 기본적인 회원 서비스 제공을 위한 필수정보로 실명인증정보와 가입정보로 구분하여 다음의 정보를 수집하고 있습니다. 필수정보를 입력해주셔야 회원 서비스 이용이 가능합니다.<br><br>
   
@@ -213,13 +207,13 @@
       <div>
         <button @click="joinSubmit" class="border-2 bg-blue-700 rounded-lg text-white font-bold p-2 px-6">동의</button>
         <button @click="gologin" class="border-2 bg-red-700 rounded-lg text-white font-bold p-2 px-6">취소</button>
-        <div class="mb-52">
+        <div class="">
   
       </div>
       <div class="p-10"></div>
     </div>
   
-</div>
+  </div>
   </div>
   </template>
   
