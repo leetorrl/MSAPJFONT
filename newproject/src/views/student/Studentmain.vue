@@ -11,9 +11,8 @@
   </template>
   
   <script>
- import HeaderTop from '@/layout/HeaderTop.vue';
-
-  import '@/assets/base.css'
+import HeaderTop from '@/components/layout/HeaderTop.vue';
+import '@/assets/base.css'
   
   export default {
     components: {

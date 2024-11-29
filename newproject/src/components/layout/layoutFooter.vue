@@ -10,7 +10,7 @@
             <div>
               <a href="https://greenart.co.kr/" target="_blank">
                 <div class="absolute flex items-center left-[41%]">
-                  <img src="../images/LOGO.png" alt="" class="h-8 max-md:w-28 cover cursor-pointer" />
+                  <img src="../assets/images/LOGO.png" alt="" class="h-8 max-md:w-28 cover cursor-pointer" />
                   <!-- @click="logoclick" -->
                   그린컴퓨터아트학원(대구지점)
                 </div>

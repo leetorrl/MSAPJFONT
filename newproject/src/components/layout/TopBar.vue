@@ -4,7 +4,7 @@
         <!-- 로고 -->
         <button type="button">
           <router-link to="#">
-            <img src="../images/LOGO2.png" alt="" class="pl-28 h-20 w-auto my-1" />
+            <img src="/src/assets/images/LOGO2.png" alt="" class="pl-28 h-20 w-auto my-1" />
           </router-link>
         </button>
         <!-- 중간 메뉴-->
@@ -17,11 +17,11 @@
         <!-- 우측 아이콘 -->
         <div class="space-x-8 justify-center flex mr-3">
           <button type="button">
-            <router-link to="/MyPage"> <img src="../images/mycon.png" alt="" /></router-link>
+            <router-link to="/MyPage"> <img src="/src/assets/images/mycon.png" alt="" /></router-link>
           </button>
           <button type="button" @click="toggleNotification">
-            <img v-if="isBell1" src="../images/bell1.png" alt="" />
-            <img v-else src="../images/bell2.png" alt="" />
+            <img v-if="isBell1" src="/src/assets/images/bell1.png" alt="" />
+            <img v-else src="/src/assets/images/bell2.png" alt="" />
           </button>
           <!-- 토글 알림 창-->
           <div

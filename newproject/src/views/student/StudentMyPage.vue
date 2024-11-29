@@ -6,7 +6,7 @@
         <hr />
       </div>
       <div id="main-top">
-        <img src="./../images/stude.jpg" alt="student" />
+        <img src="./../../assets/images/stude.jpg" alt="student" />
         <div id="main-top-text">
           <p>이름</p>
           <p>전화번호</p>

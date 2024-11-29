@@ -1,8 +1,8 @@
 <template>
-  <img src="/src/images/wall5.png" alt="" class="absolute w-screen h-screen opacity-50" />
+  <img src="/src/assets/images/wall5.png" alt="" class="absolute w-screen h-screen opacity-50" />
   <div class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
     <div class="flex justify-center bg-gray-300 bg-opacity-30">
-      <img src="/src/images/LOGO.png" alt="" class="w-28" />
+      <img src="/src/assets/images/LOGO.png" alt="" class="w-28" />
       <h1
         class="font-mono font-black italic text-3xl tracking-tight flex items-center text-white drop-shadow-[0_1.5px_1.5px_rgba(0,0,0,1)] ml-5">
         GREEN COMPUTER ACADEMY

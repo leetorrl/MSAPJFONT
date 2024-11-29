@@ -1,7 +1,7 @@
 <template>
     <div class="w-40 rounded-sm">
       <div class="rounded-md bg-blue-50">
-        <img src="../images/LOGO2.png" alt="Logo" />
+        <img src="/src/assets/images/LOGO2.png" alt="Logo" />
       </div>
       <div class="bg-blue-300 h-[650px]">
         <aside class="p-3 text-gray-950 font-bold font-[GmarketSansMedium]">
@@ -14,7 +14,7 @@
                   :class="{ 'bg-blue-200 rounded-md': activeItem === 'deskcalander' }"
                   class="flex items-center py-1 my-1 mt-2 text-sm"
                 >
-                  <img src="../images/AtenCheck.png" alt="" class="mr-2" />
+                  <img src="/src/assets/images/AtenCheck.png" alt="" class="mr-2" />
                   출결리스트
                 </div>
               </li>
@@ -27,7 +27,7 @@
                   :class="{ 'bg-blue-200 rounded-md': activeItem === 'vacationmanage' }"
                   class="flex items-center py-1 mt-2 text-sm"
                 >
-                  <img src="../images/check.png" alt="" class="mr-2" />
+                  <img src="/src/assets/images/check.png" alt="" class="mr-2" />
                   휴가 신청 관리
                 </div>
               </li>
@@ -41,7 +41,7 @@
                   :class="{ 'bg-blue-200 rounded-md': activeItem === 'lectureselect' }"
                   class="flex items-center py-1 my-2 text-sm"
                 >
-                  <img src="../images/wlearn.png" alt="" class="mr-2" />
+                  <img src="/src/assets/images/wlearn.png" alt="" class="mr-2" />
                   강좌 관리
                 </div>
               </li>
@@ -54,7 +54,7 @@
                   :class="{ 'bg-blue-200 rounded-md': activeItem === 'mypage' }"
                   class="flex items-center py-1 my-2 text-sm"
                 >
-                  <img src="../images/mycon.png" alt="" class="mr-2" />
+                  <img src="/src/assets/images/mycon.png" alt="" class="mr-2" />
                   마이페이지
                 </div>
               </li>
@@ -67,7 +67,7 @@
                   :class="{ 'bg-blue-200 rounded-md': activeItem === 'deskannouncelist' }"
                   class="flex items-center py-1 my-2 text-sm"
                 >
-                  <img src="../images/announ.png" alt="" class="mr-2" />
+                  <img src="/src/assets/images/announ.png" alt="" class="mr-2" />
                   <p class="text-[0.8rem]">공지사항</p>
                 </div>
               </li>
@@ -84,11 +84,12 @@
   </template>
   
   <script setup>
-  import { useloginStore } from '../stores/loginpinia.js';
-  import { userrole } from '../api/loginapi.js';
+  import { useloginStore } from '@/stores/loginpinia.js';
+  import { userrole } from '@/api/loginapi.js';
   import { ref } from 'vue';
   import { useRouter } from 'vue-router';
   import { storeToRefs } from 'pinia';
+import Cookies from 'js-cookie';
   
   
   const router = useRouter()
@@ -111,7 +112,8 @@
   
     userrl.value =null
   
-   localStorage.removeItem('token');
+    Cookies.remove('token')
+  //  localStorage.removeItem('token');
    loginchecktrue();
      userrole();
      router.push({ name: 'loginview' });

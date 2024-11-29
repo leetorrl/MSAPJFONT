@@ -28,9 +28,9 @@ user5~15 학생
 </template>
 
 <script setup>
-import ManagerSideBar from './layout/ManagerSideBar.vue';
+import ManagerSideBar from './components/layout/ManagerSideBar.vue';
 
-import TeacherSideBar from './layout/TeacherSideBar.vue';
+import TeacherSideBar from './components/layout/TeacherSideBar.vue';
 
 import { useloginStore } from './stores/loginpinia';
 import { onMounted } from 'vue';
@@ -38,7 +38,7 @@ import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { userdata, userrole } from './api/loginapi';
 import { computed } from 'vue';
-import SideBar from './layout/SideBar.vue';
+import SideBar from './components/layout/SideBar.vue';
 import Cookies from 'js-cookie';
 // import TopBar from './layout/TopBar.vue';
 
@@ -60,7 +60,8 @@ const homelogin = async () => {
   // e.response나 e.data가 있을 경우에만 접근하도록 처리
   if (e && e.response && e.response.data && e.response.data.status === 401) {
     // 401 오류인 경우 처리
-    localStorage.removeItem('token');
+    Cookies.remove("token");
+    // localStorage.removeItem('token');
     userL();  // 로그아웃 함수 (로그아웃 관련 로직이 제대로 구현되어 있어야 함)
     router.push({ name: 'loginview' });  // 로그인 화면으로 이동
   } else {
@@ -68,11 +69,12 @@ const homelogin = async () => {
   }
 }
 
-if(await Cookies.get('token') !== null){
+if( Cookies.get('token') !== null){
   // if (localStorage.getItem('token') !== null) {
     console.log('로그인 유지');
     if (userrl.value == 'ROLE_STUDENT') {
       console.log('학생계정');
+
       router.push({ name: 'stdatt' });
     } else if (userrl.value == 'ROLE_TEACHER') {
       console.log('선생계정');
@@ -82,6 +84,7 @@ if(await Cookies.get('token') !== null){
       router.push({ name: 'deskcalander' });
     } else {
       console.log('맵핑문제');
+      router.push({ name: 'loginview' })
     }
   } else {
     console.log('로그아웃 상태');

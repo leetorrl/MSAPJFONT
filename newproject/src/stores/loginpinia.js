@@ -1,3 +1,4 @@
+import Cookies from 'js-cookie';
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
@@ -32,7 +33,8 @@ export const useloginStore = defineStore('loginpinia', () => {
 
   const userL = ()=> {
 
-   if(localStorage.getItem('token') !==null) {
+    if(Cookies.get('token')!==null){
+  //  if(localStorage.getItem('token') !==null) {
     userrl.value = null
    }
   }
