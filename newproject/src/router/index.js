@@ -5,9 +5,15 @@ import LoginView from '@/views/guest/LoginView.vue'
 import JoinTermsOfUse from '@/views/guest/JoinTermsOfUse.vue'
 import JoinView from '@/views/guest/JoinView.vue'
 import JoinComplete from '@/views/guest/JoinComplete.vue'
+import Studentmain from '@/views/student/Studentmain.vue'
 
-
-const studentRouter = []
+const studentRouter = [
+  {
+    path: '/studentmain',
+    name: 'studentmain',
+    component: Studentmain
+  },
+]
 
 const teacherRouter = []
 

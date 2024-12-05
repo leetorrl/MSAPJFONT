@@ -1,33 +1,61 @@
 <template>
-    <div>
-      <div class="flex justify-center text-3xl mb-1 text-blue-800 font-bold">회원가입</div>
-      <div class="flex justify-center"><hr class="border-2 mb-10 w-[150px]"></div>
-<div class="flex justify-center space-x-2 w-full max-w-2xl">
-    <div class="step flex flex-col items-center p-4 text-center bg-blue-900 text-white rounded-tl-lg rounded-bl-lg w-1/4">
-      <p class="text-xl font-bold">01.</p>
-      <p class="text-sm">이용약관 및<br>개인정보 수집 및 이용에 관한 동의</p>
-    </div>
-    <div class="step flex flex-col items-center p-4 text-center bg-white text-gray-700 border border-gray-300 w-1/4">
-      <p class="text-xl font-bold">02.</p>
-      <p class="text-sm">본인인증 및<br>기본정보 입력</p>
-    </div>
-    <div class="step flex flex-col items-center p-4 text-center bg-blue-800 text-white w-1/4">
-      <p class="text-xl font-bold">03.</p>
-      <p class="text-sm">회원 유형 <br> 설정</p>
-    </div>
-    <div class="step flex flex-col items-center p-4 text-center bg-gray-100 text-gray-500 rounded-tr-lg rounded-br-lg w-1/4">
-      <p class="text-xl font-bold">04.</p>
-      <p class="text-sm">회원가입 완료</p>
+  <div class="w-full px-5 flex justify-center">
+    <div class="flex justify-center items-stretch  w-[600px]">
+      <!-- Step 1 -->
+      <div class="relative flex-1 text-center p-5 bg-blue-900 text-white border rounded-xl">
+        <div class="text-2xl font-bold mb-2">01.</div>
+        <div class="text-sm leading-tight">
+          이용약관 및<br>개인정보수집 및<br>이용에 관한 동의
+        </div>
+        <div class="absolute -right-[30px] top-1/2 -translate-y-1/2 w-[30px] h-[30px] bg-blue-900 clip-arrow z-10 ml-[20px]"></div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="relative flex-1 text-center p-5 border rounded-xl">
+        <div class="text-2xl font-bold mb-2">02.</div>
+        <div class="text-sm leading-tight">
+          본인인증 및<br>기본정보 입력
+        </div>
+        <div  class="absolute -right-[30px] top-1/2 -translate-y-1/2 w-[30px] h-[30px] bg-white clip-arrow z-10"></div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="relative flex-1 text-center p-5 bg-blue-900 text-white border rounded-xl">
+        <div class="text-2xl font-bold mb-2">03.</div>
+        <div class="text-sm leading-tight">
+          아이디 및<br>패스워드 설정
+        </div>
+        <div class="absolute -right-[30px] top-1/2 -translate-y-1/2 w-[30px] h-[30px] bg-blue-900 clip-arrow z-10 ml-[20px]"></div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="relative flex-1 text-center p-5 border rounded-xl" >
+        <div class="text-2xl font-bold mb-2">04.</div>
+        <div class="text-sm leading-tight">
+          회원가입 완료
+        </div>
+      </div>
     </div>
   </div>
-    </div>
 </template>
 
 <script setup>
+import { defineProps } from 'vue';
 
+defineProps({
+  currentStep: {
+    type: Number,
+    default: 1
+  }
+});
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.clip-arrow {
+  clip-path: polygon(0 0, 50% 50%, 0 100%);
+  
+}
+
 
 </style>
 

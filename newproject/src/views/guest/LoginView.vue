@@ -128,11 +128,11 @@ const LoginSequence = async () => {
 
     await userdata();
 
-    if (await !useraccept.value) {
+    if (!useraccept.value) {
       userL();
 
 
-     await Cookies.remove('token')   
+     Cookies.remove('token')   
    
       // localStorage.removeItem('token');
       loginError.value = '가입 승인 후에 활동 가능합니다.'
@@ -144,7 +144,7 @@ const LoginSequence = async () => {
 
     if (userrl.value == 'ROLE_STUDENT') {
       console.log('학생계정');
-      router.push({ name: 'MyPage' });
+      router.push({ name: 'studentmain'});
     } else if (userrl.value == 'ROLE_TEACHER') {
       console.log('선생계정');
       router.push({ name: 'teachertoday' });

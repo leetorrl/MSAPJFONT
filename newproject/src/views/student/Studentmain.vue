@@ -2,7 +2,7 @@
     <div>
       <HeaderTop userType="학생용" />
       <div id="main-layout">
-        
+        <div>학생메인</div>
         <div id="content">
           <router-view />
         </div>

@@ -33,7 +33,7 @@ import ManagerSideBar from './components/layout/ManagerSideBar.vue';
 import TeacherSideBar from './components/layout/TeacherSideBar.vue';
 
 import { useloginStore } from './stores/loginpinia';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { storeToRefs } from 'pinia';
 import { userdata, userrole } from './api/loginapi';
@@ -50,6 +50,8 @@ const { logincheckfalse } = loginStore;
 const { userL,} = loginStore;
 
 const userrlvalue = computed(() => loginStore.userrl);
+
+const joinchek = ref(false)
 
 console.log(`userrl = ${JSON.stringify(userrl)}`);
 
@@ -75,7 +77,7 @@ if( Cookies.get('token') !== null){
     if (userrl.value == 'ROLE_STUDENT') {
       console.log('학생계정');
 
-      router.push({ name: 'stdatt' });
+      router.push({ name: 'studentmain' });
     } else if (userrl.value == 'ROLE_TEACHER') {
       console.log('선생계정');
       router.push({ name: 'teachertoday' });
@@ -108,8 +110,14 @@ if(await Cookies.get('token')!== null){
   //   router.push({name:'loginview'})
   //    console.log("에러"+logincheckpinia )
   //  }
+  if(Cookies.get('join') !== false){
   homelogin();
+  }
 });
+
+
+
+
 </script>
 
 <style lang="scss" scoped></style>

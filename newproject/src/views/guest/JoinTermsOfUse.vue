@@ -1,5 +1,5 @@
 <template>
-<div class="  mt-5 p-8 mx-auto bg-white rounded shadow-2xl  mb-12">
+<div class="  mt-5 p-8 w-[1500px] bg-white rounded shadow-2xl  mb-12">
 <div class="flex flex-col items-center space-y-6 mt-8  ">
       
 <JoinHeader />
@@ -205,7 +205,7 @@
         </div>
       </div>
       <div>
-        <button @click="joinSubmit" class="border-2 bg-blue-700 rounded-lg text-white font-bold p-2 px-6">동의</button>
+        <button @click="joinSubmit" class="border-2 rounded-lg font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline p-2 px-6">동의</button>
         <button @click="gologin" class="border-2 bg-red-700 rounded-lg text-white font-bold p-2 px-6">취소</button>
         <div class="">
   
@@ -221,13 +221,14 @@
   import { ref } from 'vue'
   import { useRouter } from 'vue-router';
   import JoinHeader from '@/components/layout/JoinHeader.vue';
-  
+
   const router = useRouter();
   
   const agree1 = ref(false)
   const agree2 = ref(false)
   const allAgree = ref(false)
   
+
   function toggleAllAgree(event) {
     const isChecked = event.target.checked
     agree1.value = isChecked
@@ -248,6 +249,7 @@
   router.go(-1)
   }
   
+
   </script>
   
   <style lang="scss" scoped>

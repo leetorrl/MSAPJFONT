@@ -1,5 +1,5 @@
 <template>
-    <div class="w-3/4 max-w-2xl mt-5 p-8 mx-auto bg-white rounded shadow-2xl min-w-80 max-lg:w-1/2 mb-12">
+    <div class="w-[1500px] mt-5 p-8  bg-white rounded shadow-2xl  mb-12">
         <JoinHeader />
         <h1 class="my-6 text-3xl  font-bold text-center">GREEN COMPUTER ACADEMY</h1>
   
@@ -9,6 +9,8 @@
       <form @submit.prevent="joinuser">
   
         <!-- 아이디 입력 -->
+         <div class="flex justify-center">
+         <div class="w-[800px] ">
         <label for="role" class="inline mb-2 text-sm font-bold  text-blue-800">1. 기본 정보 입력</label>
         <hr class="m-1">
   
@@ -118,6 +120,9 @@
           <label for="role-3" class="p-1 pr-3 mr-10">매니저</label></div>
           
         </div>
+      </div>
+    </div>
+
         <div class="flex justify-center my-4">
         <button
           @click="joinuser"
@@ -140,8 +145,7 @@
   
   </div>
   </template>
-  
-  <script setup>
+    <script setup>
   import { ref } from 'vue'
   import { useRouter } from 'vue-router'
   import { checkPhapi } from '@/api/joinapi';
