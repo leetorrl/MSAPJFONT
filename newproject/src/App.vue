@@ -51,7 +51,6 @@ const { userL,} = loginStore;
 
 const userrlvalue = computed(() => loginStore.userrl);
 
-const joinchek = ref(false)
 
 console.log(`userrl = ${JSON.stringify(userrl)}`);
 
@@ -110,9 +109,7 @@ if(await Cookies.get('token')!== null){
   //   router.push({name:'loginview'})
   //    console.log("에러"+logincheckpinia )
   //  }
-  if(Cookies.get('join') !== false){
   homelogin();
-  }
 });
 
 

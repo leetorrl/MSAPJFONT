@@ -1,5 +1,8 @@
 <template>
+  <div class="flex justify-center"><h1 class="text-2xl font-bold text-blue-900 border-b-2 mb-5">회원가입</h1></div>
+  
   <div class="w-full px-5 flex justify-center">
+    
     <div class="flex justify-center items-stretch  w-[600px]">
       <!-- Step 1 -->
       <div class="relative flex-1 text-center p-5 bg-blue-900 text-white border rounded-xl">

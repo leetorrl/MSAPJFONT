@@ -32,4 +32,3 @@ import '@/assets/base.css'
     padding: 20px; /* 필요에 따라 여백을 추가 */
   }
   </style>
-  

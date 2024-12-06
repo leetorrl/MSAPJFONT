@@ -2,16 +2,15 @@
 
     <div class="  mt-5 p-8 w-[1500px] bg-white rounded shadow-2xl  mb-12">
         <div class=" "   >
+            
     <div class="  m-3 rounded ">
-            <!-- Step Progress Bar -->
-             <div class="flex justify-center"><JoinHeader /></div>
+            <!-- Step Progress Bar --><JoinHeader />
+             <div class="flex justify-center"></div>
             
-        <div class="text-center pt-5  ">
-            
-       
-         
-        <h1 class="text-2xl font-bold text-blue-900 pt-8 pb-3">회원가입이 완료되었습니다!</h1>
-        <hr class="mb-6 border ">
+        <div class="text-center pt-5 ">
+         <div class=" flex justify-center mb-5"><h1 class="text-2xl font-bold text-blue-900 pt-8 pb-3 flex justify-center border-b-2">회원가입이 완료되었습니다!</h1></div>
+        
+        
         <div class="flex justify-center">
         <div class="bg-[rgb(243,249,255)] p-8 h-80 font-bold w-[520px] text-blue-900 cursor-pointer border-2 rounded-xl shadow-xl" @click="gologinview">
             <p class="font-bold text-xl">로그인 페이지로 돌아가기 >></p>

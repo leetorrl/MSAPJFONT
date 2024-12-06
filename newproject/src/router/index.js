@@ -6,6 +6,7 @@ import JoinTermsOfUse from '@/views/guest/JoinTermsOfUse.vue'
 import JoinView from '@/views/guest/JoinView.vue'
 import JoinComplete from '@/views/guest/JoinComplete.vue'
 import Studentmain from '@/views/student/Studentmain.vue'
+import JoinView2 from '@/views/guest/JoinView2.vue'
 
 const studentRouter = [
   {
@@ -26,8 +27,8 @@ const guestRouter = [
     component: LoginView
   },
   {
-    path: '/jointermsofuse',
-    name: 'jointermsofuse',
+    path: `/jointermsofuse`,
+    name: `jointermsofuse`,
     component: JoinTermsOfUse,
   },
   {
@@ -35,7 +36,11 @@ const guestRouter = [
     name: 'joinview',
     component: JoinView,
   },
-
+  {
+    path: '/joinview2',
+    name: 'joinview2',
+    component: JoinView2,
+  },
   {
     path: '/joincomplete',
     name: 'joincomplete',

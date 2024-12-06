@@ -53,7 +53,6 @@
         </div>
         <router-link to="jointermsofuse">
           <button class="text-sm text-blue-900">회원이 아니신가요?</button>
-          <button @click="gocom">test</button>
         </router-link>
       </div>
       <!-- Notice Box Section -->
@@ -83,8 +82,10 @@ import { storeToRefs } from 'pinia';
 import { userdata, userrole, logincontrol } from '@/api/loginapi';
 import { onMounted } from 'vue';
 import { loginannounceapi } from '@/api/announceapi';
+import dayjs from 'dayjs';
 import Cookies from 'js-cookie';
 
+const nowdate = dayjs().format('YYYYMMDD')
 const loginpinia = useloginStore();
 
 const { userrl, useraccept } = storeToRefs(loginpinia);
@@ -188,12 +189,6 @@ const Choicema = () => {
   console.log(radiocheck.value)
   
 }
-
-const gocom = () => {
-
-  router.push({name:'joincomplete'})
-}
-
 
 onMounted(async () => {
  await getannounce();
